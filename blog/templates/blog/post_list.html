@@ -6,16 +6,13 @@
 	<body>
 		<div>
 			<h1><a href="">Django Girls Blog</a></h1>
-		</div>		
+		</div>	
+		{% for post in posts %}	
 		<div>
-			<p>published: 14.06.2016, 12:14</p>
-			<h2><a href="">My first post</a></h2>
-			<p>Lorem ipsum dolor sit amet, qui stet aperiam bonorum ea, alii reformidans eu pri, ad vel saperet maiestatis. Id vim solum rationibus, usu in malis fuisset forensibus. No hinc voluptaria per. Omnesque vulputate expetendis et pri, quidam argumentum quo ei. Tota nullam doming per no, sea tempor discere ei, no elit rebum voluptatum has.</p>
+			<p>published: {{post.published_date}}</p>
+			<h2><a href="">{{post.title}}</a></h2>
+			<p>{{post.text | linebreaksbr}}
 		</div>
-		<div>
-			<p>published: 14.06.2016, 12:14</p>
-			<h2><a href="">My seconds post</a></h2>
-			<p>Lorem ipsum dolor sit amet, qui stet aperiam bonorum ea, alii reformidans eu pri, ad vel saperet maiestatis. Id vim solum rationibus, usu in malis fuisset forensibus. No hinc voluptaria per. Omnesque vulputate expetendis et pri, quidam argumentum quo ei. Tota nullam doming per no, sea tempor discere ei, no elit rebum voluptatum has.</p>
-		</div>
+		{% endfor %}
 	</body>
 </html>
