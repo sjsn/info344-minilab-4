@@ -6,9 +6,9 @@ ml4venv
 
 db.sqlite3
 
-/static
+*/static
 
 .DS_STORE
 
-settings.py
+*/settings.py
 
